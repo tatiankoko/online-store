@@ -1,0 +1,138 @@
+.cart-preview {
+    top: calc(100% + 18px);
+
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 24px;
+        margin-top: 0;
+
+        width: 477px;
+    }
+
+    &__item {
+        border-top: 0.5px solid $color-line;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        padding-top: 24px;
+
+        &_top {
+            border-top: 0;
+            padding-top: 0;
+        }
+    }
+
+    &__left {
+        display: flex;
+        gap: 24px;
+    }
+
+    &__image {
+        width: 144px;
+        display: block;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    &__title {
+        color: $color-title;
+        font-size: $fs-h3;
+        font-weight: $fw-medium;
+        line-height: 29px;
+        text-align: left;
+    }
+
+    &__price {
+        color: $color-price;
+        font-weight: $fw-regular;
+        line-height: 20px;
+        text-align: left;
+    }
+
+    &__link-box {
+        margin-top: auto;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    &__link {
+        @extend %font-text-2;
+        color: $color-title;
+        line-height: 17px;
+        text-decoration-line: underline;
+
+        transition: all 0.5s;
+
+        &:hover {
+            text-decoration-line: none;
+            color: $color-description;
+        }
+    }
+
+    &__amount {
+        //font-family: "Poppins";
+        text-align: center;
+        font-size: 0.875rem;
+        font-weight: $fw-semi-bold;
+        line-height: 21px;
+
+        background-color: $color-background;
+        border-radius: 6px;
+        border: 0px;
+
+        width: 70px;
+        height: 51px;
+        padding: 9px 14px;
+
+        &:active,
+        &:focus {
+            border: 0px;
+        }
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            opacity: 1;
+        }
+    }
+
+    &__final {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__final-price {
+        color: $color-title;
+        font-size: $fs-h3;
+        font-weight: $fw-regular;
+        line-height: 100%;
+        text-align: center;
+    }
+
+    &__place-order {
+        box-sizing: border-box;
+        border: 1px solid #040404;
+        border-radius: 20px;
+
+        width: 207px;
+        padding: 10px;
+
+        transition: all 1s;
+
+        &:hover {
+            background: $color-title;
+            color: $color-text;
+            text-decoration-line: none;
+        }
+    }
+}

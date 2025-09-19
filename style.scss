@@ -1,0 +1,485 @@
+@import 'vars';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    /* Задаем базовый размер шрифта */
+}
+
+body {
+    font-family: $font-fam;
+
+}
+
+a,
+input,
+button {
+    font-family: $font-fam;
+}
+
+input:focus {
+    outline: none;
+}
+
+b {
+    font-weight: $fw-medium;
+}
+
+.button {
+    border: 1px solid $color-border;
+    border-radius: 20px;
+    background-color: transparent;
+
+    color: $color-title;
+    font: inherit;
+    font-weight: $fw-regular;
+    line-height: 100%;
+    text-align: center;
+
+    padding: 9px 22px 11px 22px;
+
+    text-decoration-line: none;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.top {
+    background-image: url(./img/top.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    height: 735px;
+
+    &__title {
+        @extend %h1;
+        text-align: left;
+
+        max-width: $width-site * 2 / 3; // 792px;
+    }
+
+    &__subtitle {
+        font-size: $fs-h3;
+        font-weight: $fw-regular;
+        line-height: 2rem;
+        text-align: left;
+    }
+
+    &__link {
+        color: $color-text;
+        font-weight: $fw-regular;
+        line-height: 1.5rem; // 24px
+        text-align: left;
+        text-decoration-line: underline;
+
+        &:hover {
+            text-decoration-line: none;
+        }
+    }
+}
+
+.header {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding-top: $gap / 2;
+    padding-bottom: $gap / 2;
+
+    &__input {
+        border: 1px solid $color-text;
+        border-radius: 20px;
+        background-color: transparent;
+
+        color: $color-text;
+        font: inherit;
+        font-weight: $fw-regular;
+        line-height: 100%;
+        text-align: left;
+
+        padding: 10.5px $gap;
+
+        &::placeholder {
+            color: $color-text;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    gap: $gap;
+
+    &__link {
+        color: $color-text;
+        font-weight: $fw-regular;
+        line-height: 100%;
+        text-align: left;
+
+        text-decoration-line: none;
+
+        &:hover {
+            text-decoration-line: underline;
+        }
+    }
+
+    &-mobile {
+        display: none;
+    }
+
+    &[open]>summary::after {
+        content: "";
+        display: none;
+    }
+
+    &__summary {
+        display: block;
+        cursor: pointer;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::after {
+            content: "";
+            display: none;
+        }
+    }
+}
+
+.nav-button-wrapper {
+    position: relative;
+}
+
+.top-content {
+    padding-top: $gap * 2;
+    color: $color-text;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: $gap / 2;
+
+    &-pages {
+        padding-top: 127px;
+    }
+}
+
+.title {
+    color: $color-title;
+
+    font-size: 3rem;
+    font-weight: $fw-semi-bold;
+    line-height: 100%;
+    text-align: left;
+}
+
+.for {
+    margin-top: $gap * 2;
+
+    &__content {
+        display: grid;
+        gap: $gap;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-content: center;
+
+        margin-top: $gap;
+    }
+
+    &__item {
+        color: $color-text;
+        font-size: 2.125rem;
+        font-weight: $fw-semi-bold;
+        line-height: 100%;
+        letter-spacing: 0%;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: $height-for-item;
+        grid-column: span 4;
+        grid-row: span 1;
+
+        &_big {
+            grid-column: span 6;
+            grid-row: span 1;
+        }
+
+        &_1 {
+            background-image: url(./img/for-1.png);
+        }
+
+        &_2 {
+            background-image: url(./img/for-2.png);
+        }
+
+        &_3 {
+            background-image: url(./img/for-3.png);
+        }
+
+        &_4 {
+            background-image: url(./img/for-4.png);
+        }
+
+        &_5 {
+            background-image: url(./img/for-5.png);
+        }
+    }
+}
+
+.product-box {
+    margin-top: $gap * 2;
+
+    &__price {
+        display: flex;
+        gap: $gap;
+    }
+}
+
+.product-content {
+    display: flex;
+    column-gap: $gap;
+    row-gap: 48px;
+    flex-wrap: wrap;
+
+    margin-top: $gap;
+}
+
+.product {
+    width: $width-product;
+    display: flex;
+    flex-direction: column;
+
+    &__image-options {
+        display: flex;
+        position: relative;
+
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        width: 100%;
+    }
+
+    &__image {
+        width: 100%;
+        display: block;
+    }
+
+    &__options {
+        position: absolute;
+        display: none;
+        justify-items: center;
+        gap: 21px;
+
+        top: 0;
+        right: 0;
+        padding: 10px;
+    }
+
+    &:hover &__options {
+        display: flex;
+    }
+
+    &__title {
+        color: $color-title;
+        font-size: $fs-h3;
+        font-weight: $fw-medium;
+        line-height: 31px;
+        text-align: left;
+        text-decoration-line: none;
+    }
+
+    &__description {
+        @extend %font-text-2;
+
+        color: $color-description;
+        line-height: 17px;
+        text-align: left;
+        display: block;
+
+        margin-top: 0.5rem;
+        margin-bottom: 12px;
+    }
+
+    &__price {
+        color: $color-price;
+        font-size: $fs-h3;
+        font-weight: $fw-medium;
+        line-height: 37px;
+        text-align: left;
+
+        &::after {
+            content: " руб.";
+        }
+    }
+
+    &__price-old {
+        color: $color-description;
+        text-decoration-line: line-through;
+    }
+}
+
+.link-box {
+    margin-top: 31px;
+    margin-bottom: $gap * 2;
+
+    &__link {
+        color: $color-title;
+        font-size: $fs-base;
+        font-weight: $fw-regular;
+        line-height: 24px;
+        text-align: left;
+        text-decoration-line: underline;
+
+        transition: color 0.5s;
+
+        &:hover {
+            text-decoration-line: none;
+            color: $color-description;
+        }
+    }
+}
+
+.footer {
+    background: $color-background;
+
+    padding-top: $gap;
+    padding-bottom: 60px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    justify-content: space-between;
+    margin: auto;
+    gap: 70px;
+
+    &__logo {
+        grid-column: 1 / 2;
+    }
+
+    &__info {
+        display: flex;
+        gap: 129px;
+    }
+
+    &__title {
+        color: $color-title;
+        font-size: $fs-h3;
+        font-weight: $fw-medium;
+        line-height: 100%;
+        text-align: left;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+
+    &__link {
+        @extend %font-text-2;
+        line-height: 17px;
+
+        color: $color-description;
+        text-align: left;
+
+        text-decoration-line: none;
+
+        transition: all 0.5s;
+
+        &:hover {
+            color: $color-title;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__form {
+        grid-column: -2 / -1;
+        justify-self: flex-end;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__form-text {
+        @extend %font-text-3;
+        color: $color-title;
+        text-align: left;
+    }
+
+    &__input {
+        border: 1px solid $color-border;
+        border-radius: 16px;
+        background: $color-text;
+        font-family: inherit;
+        @extend %font-text-3;
+        color: $color-title;
+        text-align: left;
+        width: 100%;
+
+        padding: 12px 17px;
+
+        &::placeholder {
+            @extend %font-text-3;
+            color: $color-border;
+            font: inherit;
+            text-align: left;
+        }
+    }
+
+    &__button {
+        border-radius: 16px;
+        background: #DED7D769;
+        border: none;
+
+        @extend %font-text-3;
+        color: $color-title;
+        text-align: center;
+
+        padding: 12px 0;
+        width: 100%;
+
+        transition: all 1s;
+
+        &:hover {
+            background: $color-title;
+            color: $color-text;
+            font-weight: $fw-medium;
+        }
+    }
+}
+
+.icon:hover path {
+    fill: $color-title;
+}
+
+.icon path {
+    transition: fill 1s;
+}
+
+@import 'catalog';
+@import 'filter';
+@import 'cart';
+@import 'cart-preview';
+@import 'tablet';
+@import 'mobile';

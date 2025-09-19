@@ -1,0 +1,212 @@
+@media (max-width: 767px) {
+    .center {
+        padding-left: $gap / 2;
+        padding-right: $gap / 2;
+    }
+
+    .top {
+        background-position: 30% 100%;
+
+        &__title {
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 59px;
+            text-align: center;
+        }
+
+        &__subtitle {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        &__link {
+            font-size: 0.875rem;
+        }
+    }
+
+    .top-cat {
+        background-image: url(./img/top-catalog-mob.jpg);
+        height: $height-top-pages;
+    }
+
+    .top-cart {
+        background-image: url(./img/top-cart-mob.jpg);
+    }
+
+    .top-content {
+        padding-top: 29px;
+
+        align-items: center;
+
+        &-pages {
+            padding-top: 82px;
+        }
+    }
+
+    .header {
+        padding-top: 32px + 16px;
+        border-bottom: none;
+
+        &__input {
+            display: none;
+        }
+    }
+
+    .logo-image {
+        width: 99px;
+    }
+
+    .nav {
+        display: none;
+
+        &-mobile {
+            display: flex;
+            align-items: center;
+            gap: $gap;
+        }
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .for {
+        margin-top: $gap;
+
+        &__content {
+            grid-template-columns: repeat(auto-fit, minmax(343px, 1fr));
+            gap: $gap / 2;
+        }
+
+        &__item {
+            grid-column: 1 / -1;
+            height: 375px;
+
+            font-size: 1.75rem;
+
+            &_big {
+                height: 244px;
+            }
+        }
+    }
+
+    .filter-form {
+        right: inherit;
+        left: 0;
+
+        &__content-wrapper {
+            max-height: 100%;
+            min-width: 190px;
+        }
+    }
+
+    .filter {
+        &__select {
+            min-width: 203px;
+            font-size: 0.875rem;
+        }
+
+        &__button {
+            font-size: 0.875rem;
+        }
+    }
+
+    .product-box,
+    .product-box-cat {
+        margin-top: $gap;
+
+    }
+
+    .product-content {
+        column-gap: 30px;
+        row-gap: $gap;
+
+        &-cat {
+            margin-top: $gap;
+        }
+    }
+
+    .product {
+        flex-basis: 342px;
+        flex-grow: 1;
+
+        &__title {
+            margin-top: 9px;
+            margin-bottom: 9px;
+
+            font-size: 1.125rem;
+        }
+
+        &__description {
+            margin-bottom: 8px;
+        }
+
+        &__price {
+            font-size: 1.125rem;
+        }
+    }
+
+    .cart {
+        margin-top: 92px;
+        column-gap: 0;
+        row-gap: 48px;
+
+        &__image {
+            display: none;
+        }
+
+        &__name-box {
+            display: none;
+        }
+
+        &__info {
+            gap: 0.5rem;
+            max-width: 253px;
+        }
+
+        &__title {
+            font-size: 1.125rem; // 18px
+        }
+
+        &__description {
+            font-size: 0.75rem; // 12px
+        }
+
+        &__price {
+            font-size: 0.75rem; // 12px
+        }
+
+        &__option {
+            justify-content: space-between;
+            margin-top: 0;
+        }
+
+        &__button {
+            width: 163px;
+            padding: 10px 6px;
+            font-size: 0.75rem;
+        }
+    }
+
+    .link-box {
+        margin-bottom: $gap;
+    }
+
+    .footer {
+        padding-top: 33px;
+        padding-bottom: 33px;
+
+        &__content {
+            justify-content: center;
+            gap: 69px;
+        }
+
+        &__info {
+            gap: 100px;
+        }
+
+        &__form {
+            justify-self: center;
+        }
+    }
+}

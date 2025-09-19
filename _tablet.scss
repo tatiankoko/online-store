@@ -1,0 +1,69 @@
+@media (max-width: 1220px) {
+    //834px
+
+    .center {
+        padding-left: calc(50% - 786px / 2);
+        padding-right: calc(50% - 786px / 2);
+    }
+
+    .top {
+        background-image: url(./img/top-tablet.jpg);
+        height: 100vh;
+    }
+
+    .top-cat {
+        background-image: url(./img/top-catalog-tablet.jpg);
+        height: $height-top-pages;
+    }
+
+    .top-cart {
+        background-image: url(./img/top-cart-tablet.jpg);
+        height: $height-top-pages;
+    }
+
+    .filter {
+        position: relative;
+    }
+
+    .filter-button-wrapper {
+        position: static;
+    }
+
+    .for {
+        &__item {
+            height: 268px;
+
+            &_1 {
+                background-image: url(./img/for-1-mob.jpg);
+            }
+
+            &_2 {
+                background-image: url(./img/for-2-mob.jpg);
+            }
+        }
+    }
+
+    .product__options {
+        display: flex;
+    }
+
+    .product-content {
+        column-gap: 29px;
+        row-gap: 39px;
+    }
+
+    .footer__logo {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 833px) {
+    .center {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .product {
+        width: 345px;
+    }
+}
