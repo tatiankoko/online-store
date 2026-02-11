@@ -260,7 +260,6 @@ b {
   font-size: 2.125rem;
   font-weight: 600;
   line-height: 100%;
-  letter-spacing: 0%;
   background-repeat: no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -1641,7 +1640,7 @@ b {
           text-decoration-line: none;
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 1240px) {
   .center {
     padding-left: calc(50% - 786px / 2);
     padding-right: calc(50% - 786px / 2);
@@ -1688,7 +1687,7 @@ b {
   }
 }
 
-@media (min-width: 768px) and (max-width: 833px) {
+@media (min-width: 768px) and (max-width: 834px) {
   .center {
     padding-left: 24px;
     padding-right: 24px;

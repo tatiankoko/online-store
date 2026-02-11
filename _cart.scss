@@ -201,6 +201,10 @@
         ::placeholder {
             color: $color-title;
         }
+
+        // &_tel:invalid {
+        //     border-bottom: 1px solid red;
+        // }
     }
 
     &__order-box {
