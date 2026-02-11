@@ -15,5 +15,6 @@ Animate.css для анимаций;
 Git и GitHub для контроля версий.
 
 ## Скриншоты
-![screenshot](/sample-img/screenshot-cat.png)
-![screenshot](/sample-img/screenshot-cart.png)
+![screenshot](/sample-img/Screenshot-cat.png)
+
+![screenshot](/sample-img/Screenshot-cart.png)
